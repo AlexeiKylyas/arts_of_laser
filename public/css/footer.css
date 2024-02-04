@@ -1,0 +1,60 @@
+/* Стилі для футера */
+footer {
+    background-color: #333; /* Колір фону */
+    color: #ffffff; /* Колір тексту */
+    padding: 20px 0; /* Внутрішні відступи від верху та низу футера */
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 0 20px; /* Зовнішні відступи між блоками футера */
+}
+
+.footer-section h3 {
+    font-size: 18px; /* Розмір заголовку */
+}
+
+.footer-section p {
+    font-size: 16px; /* Розмір тексту */
+    margin: 5px 0; /* Внутрішні відступи між абзацами */
+}
+
+/* Стилі для посилань у футері (якщо є) */
+.footer-links a {
+    color: #ffffff; /* Колір посилань */
+    text-decoration: none; /* Заборонити підкреслення посилань */
+    margin-right: 20px; /* Зовнішні відступи між посиланнями */
+    font-weight: bold; /* Жирний шрифт для посилань */
+}
+
+/* Стилі для карти Google у футері */
+.footer-map {
+    width: 100%; /* Ширина карти на весь блок футера */
+    height: 300px; /* Висота карти (задайте власну висоту) */
+}
+
+/* Стилі для бургера (мобільна версія) */
+.burger-icon {
+    display: none; /* По замовчуванню ховаємо бургер на десктопі */
+}
+
+@media (max-width: 768px) {
+    /* Стилі для мобільних пристроїв */
+
+    .footer-section {
+        text-align: center; /* Центруємо блоки у мобільному вигляді */
+        margin: 10px 0; /* Зовнішні відступи між блоками у мобільному вигляді */
+    }
+
+    .burger-icon {
+        display: inline-block; /* Відображаємо бургер на мобільних пристроях */
+        cursor: pointer;
+    }
+
+    .footer-links {
+        text-align: center; /* Центруємо посилання у мобільному вигляді */
+        margin-top: 10px; /* Зовнішні відступи для посилань у мобільному вигляді */
+    }
+}
