@@ -2,9 +2,10 @@
 
 @section('content')
     <div>
-        @foreach($services as $service)
-            <span>{{ $service->name }}</span>
-            <span>{{ $service->description }}</span>
-        @endforeach
+        <div class="salon-banner">
+            <div class="overlay"></div>
+            <h1>Beauty<br>Salon</h1>
+            <a href="#appointment" class="button">Make An Appointment</a>
+        </div>
     </div>
 @endsection

@@ -3,6 +3,50 @@ body{
     margin: 0px!important;
     background-color: #FFF9F3;
 }
-.main_content{
-    padding: 10px;
+.salon-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    background-image: url('/images/main_page_girl.webp');
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Встановіть висоту за вашими потребами */
+}
+
+.salon-banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    margin: 0;
+}
+
+.salon-banner .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.salon-banner .button:hover {
+    background: white;
+    color: black;
+}
+
+.salon-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }

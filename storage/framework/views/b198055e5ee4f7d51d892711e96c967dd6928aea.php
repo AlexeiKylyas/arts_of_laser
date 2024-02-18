@@ -1,9 +1,10 @@
 <?php $__env->startSection('content'); ?>
     <div>
-        <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <span><?php echo e($service->name); ?></span>
-            <span><?php echo e($service->description); ?></span>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        <div class="salon-banner">
+            <div class="overlay"></div>
+            <h1>Beauty<br>Salon</h1>
+            <a href="#appointment" class="button">Make An Appointment</a>
+        </div>
     </div>
 <?php $__env->stopSection(); ?>
 
