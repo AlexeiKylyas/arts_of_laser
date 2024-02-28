@@ -18,13 +18,24 @@ class CategoryController extends Controller
         // Валідація даних з форми
         $request->validate([
             'name' => 'required|string|max:255',
-            // Додайте інші правила валідації за необхідності
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Приклад валідації для фото
+            'short_desc' => 'required|string|max:255',
+            'full_desc' => 'required|string|max:1000',
+            'show_on_main' => 'int'
         ]);
 
+        $showOnMain = $request->has('show_on_main') ? 1 : 0;
+
+        // Збереження фото
+        $photoPath = $request->file('photo')->store('photos/categories'); // Збереження фото у теку storage/app/photos/categories
+
         // Створення нової категорії
-        Category::create([
+        Category::createCategory([
             'name' => $request->name,
-            // Додайте інші поля для збереження
+            'photo' => $photoPath, // Збереження шляху до файлу фото у базі даних
+            'show_on_main' => $showOnMain,
+            'full_desc' => $request->full_desc,
+            'short_desc' => $request->short_desc
         ]);
 
         // Повернення до попередньої сторінки з повідомленням про успішне створення
