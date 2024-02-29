@@ -1,15 +1,4 @@
-<!-- resources/views/admin/login.blade.php -->
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Admin Login</title>
-    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
-    <link href="<?php echo e(asset('css/bootstrap.css')); ?>" rel="stylesheet"> <!-- Додайте цей рядок -->
-
-</head>
-<body>
-
+<?php $__env->startSection('content'); ?>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -99,9 +88,6 @@ unset($__errorArgs, $__bag); ?>
         </div>
     </div>
 </div>
+<?php $__env->stopSection(); ?>
 
-<script src="<?php echo e(asset('js/bootstrap.js')); ?>"></script>
-<script src="<?php echo e(asset('js/bootstrap.bundle.js')); ?>"></script>
-</body>
-</html>
-<?php /**PATH /var/www/html/arts_of_laser_site/resources/views/admin/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/arts_of_laser_site/resources/views/admin/login.blade.php ENDPATH**/ ?>
